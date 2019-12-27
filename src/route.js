@@ -1,5 +1,5 @@
-const fs = require('fs');
-
+const fs = require("fs");
+//this file is created for raw request parsing
 const requestHandler = (req, res) => {
   const url = req.url;
   const method = req.method;
