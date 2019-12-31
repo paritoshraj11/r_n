@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("layout/head") -%>
+    <link rel="stylesheet" type="text/css" href="/css/product.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("layout/nav", { path:"/" }) -%>
+    <main>
+      <div class="grid">
+        <% for (var i = 0 ; i < data.length ; i++) { %>
+        <article class="card product-item">
+          <header class="class__header">
+            <h1 class="product__title"><%= data[i].title %></h1>
+            <img
+              src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            />
+            <div class="card__content">
+              <h2 class="product__price">$120</h2>
+              <p class="product__description">this is hello</p>
+            </div>
+            <div class="card__actions">
+              <button class="btn">Add to cart</button>
+            </div>
+          </header>
+        </article>
+        <% } %>
+      </div>
+    </main>
+  </body>
+</html>
